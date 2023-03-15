@@ -70,7 +70,7 @@ createApp({
         }
     },
     mounted(){
-        setInterval(this.gotoNext,2000);
+        const clock = setInterval(this.gotoNext,3000);
     }
 }).mount('#app')
 
