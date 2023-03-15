@@ -17,6 +17,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            clock: null,
             activeImage: 0,
             slides: [
                 {
@@ -67,10 +68,16 @@ createApp({
         },
         changeMainImage(index){
             this.activeImage = index;
+        },
+        pauseInterval(){
+            clearInterval(this.clock);
+        },
+        startInterval(){
+            this.clock = setInterval(this.gotoNext,3000);
         }
     },
     mounted(){
-        const clock = setInterval(this.gotoNext,3000);
+        this.clock = setInterval(this.gotoNext,3000);
     }
 }).mount('#app')
 
