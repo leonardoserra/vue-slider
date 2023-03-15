@@ -65,9 +65,9 @@ createApp({
                 this.activeImage = this.slides.length - 1;
             }
         },
-        // changeMainImage(){
-        //     if
-        // }
+        changeMainImage(index){
+            this.activeImage = index;
+        }
     }   
 }).mount('#app')
 
