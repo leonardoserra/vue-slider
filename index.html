@@ -17,7 +17,7 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img :src="slides[0].image" :alt="slides[0].alt" />
+                    <img v-for="slide in slides" :src="slide" :alt="slide.alt" />
                     <div class="text">
                         <h3>{{slides[0].title}}</h3>
                         <p>
