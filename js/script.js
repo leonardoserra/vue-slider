@@ -67,11 +67,11 @@ createApp({
         },
         changeMainImage(index){
             this.activeImage = index;
-        },
-        mounted(){
-            setInterval(this.gotoNext,2000);
         }
-    }   
+    },
+    mounted(){
+        setInterval(this.gotoNext,2000);
+    }
 }).mount('#app')
 
 
